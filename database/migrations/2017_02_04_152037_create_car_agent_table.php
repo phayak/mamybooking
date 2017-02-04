@@ -15,6 +15,17 @@ class CreateCarAgentTable extends Migration
     {
         Schema::create('agents', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('agent_group_id')->nullable();
+            $table->integer('country_id')->nullable();
+            $table->integer('city_id')->nullable();
+            $table->string('code')->nullable();
+            $table->string('agent_fname')->nullable();
+            $table->string('agent_lname')->nullable();
+            $table->string('agent_company')->nullable();
+            $table->string('agent_telephone')->nullable();
+            $table->string('agent_mobile')->nullable();
+            $table->string('agent_fax')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

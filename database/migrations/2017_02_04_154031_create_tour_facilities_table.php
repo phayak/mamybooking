@@ -15,6 +15,8 @@ class CreateTourFacilitiesTable extends Migration
     {
         Schema::create('tour_facilities', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('car_id')->nullable();
+            $table->integer('facilities_id')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,10 @@ class CreateAllotmentRateTable extends Migration
     {
         Schema::create('allotment_rates', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('system')->nullable();
+            $table->string('day')->nullable();
+            $table->string('alloment_info')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

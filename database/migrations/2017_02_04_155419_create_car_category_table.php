@@ -15,6 +15,9 @@ class CreateCarCategoryTable extends Migration
     {
         Schema::create('car_categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
+            $table->text('detail')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,12 @@ class CreateAgentGroupTable extends Migration
     {
         Schema::create('agent_groups', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code')->nullable();
+            $table->string('agent_group_name')->nullable();
+            $table->string('agent_group_desciption')->nullable();
+            $table->string('type')->nullable();
+            $table->string('commission')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

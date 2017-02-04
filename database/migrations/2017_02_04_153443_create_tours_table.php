@@ -15,6 +15,17 @@ class CreateToursTable extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('transport_type_id')->nullable();
+            $table->string('transport_start')->nullable();
+            $table->string('transport_end')->nullable();
+            $table->string('duration')->nullable();
+            $table->string('view')->nullable();
+            $table->string('company')->nullable();
+            $table->string('email')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('fax')->nullable();
+            $table->string('smoking_status')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,10 @@ class CreateCarBrandLangTable extends Migration
     {
         Schema::create('car_brand_langs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('car_brand_id')->nullable();
+            $table->integer('language_id')->nullable();
+            $table->string('name')->nullable();
+            $table->text('detail')->nullable();
             $table->timestamps();
         });
     }

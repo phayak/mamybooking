@@ -15,6 +15,9 @@ class CreatePromotionTable extends Migration
     {
         Schema::create('promotions', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('promotion_group_id')->nullable();
+            $table->string('code')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

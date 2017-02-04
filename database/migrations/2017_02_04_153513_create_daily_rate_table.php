@@ -15,6 +15,13 @@ class CreateDailyRateTable extends Migration
     {
         Schema::create('daily_rates', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('daily_system_id')->nullable();
+            $table->integer('daily_system_type')->nullable();
+            $table->string('daily_rate')->nullable();
+            $table->string('daily_adult_rate')->nullable();
+            $table->string('daily_child_rate')->nullable();
+            $table->string('daily_promotion_id')->nullable();
+            $table->date('date')->nullable();
             $table->timestamps();
         });
     }

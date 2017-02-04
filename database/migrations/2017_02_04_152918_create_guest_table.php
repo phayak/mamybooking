@@ -15,6 +15,14 @@ class CreateGuestTable extends Migration
     {
         Schema::create('guests', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('transaction_system_id')->nullable();
+            $table->string('prefix')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('country_of_passport')->nullable();
+            $table->string('smoking_preference')->nullable();
+            $table->string('system_type')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

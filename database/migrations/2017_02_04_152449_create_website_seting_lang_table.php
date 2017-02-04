@@ -15,6 +15,10 @@ class CreateWebsiteSetingLangTable extends Migration
     {
         Schema::create('website_seting_langs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('language_id')->nullable();
+            $table->string('website_name')->nullable();
+            $table->string('policy')->nullable();
+            $table->string('cancellation_policy')->nullable();
             $table->timestamps();
         });
     }

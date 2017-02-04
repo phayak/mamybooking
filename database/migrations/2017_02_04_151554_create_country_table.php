@@ -15,6 +15,12 @@ class CreateCountryTable extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('region_id')->nullable();
+            $table->integer('language_id')->nullable();
+            $table->string('country_name')->nullable();
+            $table->string('country_iso_code_2a')->nullable();
+            $table->string('country_iso_code_3a')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

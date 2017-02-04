@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCarAmphursTable extends Migration
+class CreateAmphursTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,10 @@ class CreateCarAmphursTable extends Migration
     {
         Schema::create('amphurs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('geo_id')->nullable();
+            $table->integer('province_id')->nullable();
+            $table->string('amphur_code')->nullable();
+            $table->string('amphur_name')->nullable();
             $table->timestamps();
         });
     }

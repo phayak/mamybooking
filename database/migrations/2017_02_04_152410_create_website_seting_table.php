@@ -15,6 +15,17 @@ class CreateWebsiteSetingTable extends Migration
     {
         Schema::create('website_setings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('currency_id')->nullable();
+            $table->integer('merchant_id')->nullable();
+            $table->integer('terminal_id')->nullable();
+            $table->string('type_deposit')->nullable();
+            $table->string('deposit')->nullable();
+            $table->string('modify_lead')->nullable();
+            $table->string('mail_receiver')->nullable();
+            $table->string('mail_from')->nullable();
+            $table->string('mail_header')->nullable();
+            $table->string('respurl')->nullable();
+            $table->string('secretkey')->nullable();
             $table->timestamps();
         });
     }

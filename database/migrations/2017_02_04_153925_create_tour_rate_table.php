@@ -15,6 +15,8 @@ class CreateTourRateTable extends Migration
     {
         Schema::create('tour_rates', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('customer_id')->nullable();
+            $table->integer('rating_id')->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,13 @@ class CreateCarInformationTable extends Migration
     {
         Schema::create('car_informations', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('car_id')->nullable();
+            $table->string('conditions_of_deposit')->nullable();
+            $table->string('term_of_age')->nullable();
+            $table->string('conditions_car_rental')->nullable();
+            $table->string('driving_across_country')->nullable();
+            $table->string('kilometer')->nullable();
+            $table->string('oil_conditions')->nullable();
             $table->timestamps();
         });
     }

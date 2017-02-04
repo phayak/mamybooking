@@ -15,6 +15,9 @@ class CreateTourScheduleTable extends Migration
     {
         Schema::create('tour_schedules', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('tour_id')->nullable();
+            $table->time('time')->nullable();
+            $table->text('detail')->nullable();
             $table->timestamps();
         });
     }

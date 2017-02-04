@@ -15,6 +15,7 @@ class CreateTransportTypeTable extends Migration
     {
         Schema::create('transport_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }

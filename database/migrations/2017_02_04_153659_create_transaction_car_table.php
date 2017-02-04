@@ -15,6 +15,9 @@ class CreateTransactionCarTable extends Migration
     {
         Schema::create('transaction_cars', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('transaction_id')->nullable();
+            $table->integer('car_id')->nullable();
+            $table->integer('daily_rate_id')->nullable();
             $table->timestamps();
         });
     }

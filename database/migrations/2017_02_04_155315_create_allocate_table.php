@@ -15,6 +15,10 @@ class CreateAllocateTable extends Migration
     {
         Schema::create('allocates', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('allocate_data')->nullable();
+            $table->date('allocate_date')->nullable();
+            $table->date('allocate_expire')->nullable();
+            $table->integer('active')->nullable();
             $table->timestamps();
         });
     }

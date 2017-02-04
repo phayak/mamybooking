@@ -15,6 +15,9 @@ class CreateTransactionTourTable extends Migration
     {
         Schema::create('transaction_tours', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('transaction_id')->nullable();
+            $table->integer('tour_id')->nullable();
+            $table->integer('daily_rate_id')->nullable();
             $table->timestamps();
         });
     }

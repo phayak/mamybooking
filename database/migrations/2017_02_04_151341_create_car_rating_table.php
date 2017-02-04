@@ -15,6 +15,8 @@ class CreateCarRatingTable extends Migration
     {
         Schema::create('car_ratings', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('car_id')->nullable();
+            $table->integer('rating_id')->nullable();
             $table->timestamps();
         });
     }
